@@ -50,14 +50,21 @@ public class Calc extends JFrame {
         with cardinal directions (Center is the default).
         Center will take up as much room as possible.
         */
-        add(new CalcPanel());
+        
+        setLayout(null);
+        CalcPanel cp = new CalcPanel();
+        cp.setBounds(10,400,560,400);
+        add(cp);
+        
         setUndecorated(true);
+        
         setBackground(new Color(0,0,0,40));
         /* Transparency is broken on X11, see
         http://bugs.java.com/view_bug.do?bug_id=6849774
         "Note that until the bug 6848852 is fixed, that is unfeasible to
         test transparency on X11 because it simply does not work."
         */
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(20,40,600,800);
         setVisible(true);
