@@ -1,6 +1,7 @@
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -29,7 +30,14 @@ import javax.swing.JPanel;
 public class Calc extends JFrame {
     class CalcPanel extends JPanel {
         public CalcPanel() {
-
+            String ops = "789+456-123*0.=/";
+            
+            JButton jb;
+            Font fnt = new Font("Segoe UI", Font.PLAIN, 20);
+            for (int i=0; i < ops.length(); i++) {
+                add (jb = new JButton(ops.charAt(i)+""));
+                jb.setFont(fnt);
+            }
         }
     }
     public Calc() {
