@@ -35,7 +35,7 @@ public class Calc extends JFrame {
         public CalcPanel() {
             String ops = "789+456-123*0.=/";
             String[] op2 = {"sin", "cos", "tan", "\u00b1"};
-            setLayout(new GridLayout(4,4));
+            setLayout(new GridLayout(4,5));
             
             JButton jb;
             Font fnt = new Font("Segoe UI", Font.PLAIN, 20);
