@@ -23,6 +23,13 @@ import javax.swing.JFrame;
  * @author Michael <GrubenM@GMail.com>
  */
 public class Calc extends JFrame {
+    public Calc() {
+        super();
+        setUndecorated(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(20,40,600,1024);
+        setVisible(true);
+    }
     public static void main(String[] args) {
         
     }
