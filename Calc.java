@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /*
@@ -26,6 +27,7 @@ import javax.swing.JFrame;
 public class Calc extends JFrame {
     public Calc() {
         super();
+        add(new JButton("Testing"));
         setUndecorated(true);
         setBackground(new Color(0,0,0,40));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
