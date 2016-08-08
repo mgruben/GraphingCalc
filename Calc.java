@@ -1,4 +1,5 @@
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -32,7 +33,7 @@ public class Calc extends JFrame {
         with cardinal directions (Center is the default).
         Center will take up as much room as possible.
         */
-        add(new JButton("Testing"));
+        add(new JButton("Testing"), BorderLayout.NORTH);
         setUndecorated(true);
         setBackground(new Color(0,0,0,40));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
