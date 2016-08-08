@@ -29,8 +29,7 @@ import javax.swing.JPanel;
 public class Calc extends JFrame {
     class CalcPanel extends JPanel {
         public CalcPanel() {
-            // Defaults to FlowLayout
-            add(new JButton("Testing"));
+
         }
     }
     public Calc() {
