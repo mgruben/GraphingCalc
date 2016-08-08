@@ -1,3 +1,6 @@
+
+import javax.swing.JFrame;
+
 /*
  * Copyright (C) 2016 Michael <GrubenM@GMail.com>
  *
@@ -19,6 +22,6 @@
  *
  * @author Michael <GrubenM@GMail.com>
  */
-public class Calc {
+public class Calc extends JFrame {
     
 }
