@@ -42,6 +42,11 @@ public class Calc extends JFrame {
         add(new CalcPanel());
         setUndecorated(true);
         setBackground(new Color(0,0,0,40));
+        /* Transparency is broken on X11, see
+        http://bugs.java.com/view_bug.do?bug_id=6849774
+        "Note that until the bug 6848852 is fixed, that is unfeasible to
+        test transparency on X11 because it simply does not work."
+        */
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(20,40,600,1024);
         setVisible(true);
