@@ -2,6 +2,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -32,6 +33,8 @@ public class Calc extends JFrame {
         public CalcPanel() {
             String ops = "789+456-123*0.=/";
             
+            setLayout(new GridLayout(4,4));
+            
             JButton jb;
             Font fnt = new Font("Segoe UI", Font.PLAIN, 20);
             for (int i=0; i < ops.length(); i++) {
@@ -56,7 +59,7 @@ public class Calc extends JFrame {
         test transparency on X11 because it simply does not work."
         */
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(20,40,600,1024);
+        setBounds(20,40,600,800);
         setVisible(true);
     }
     public static void main(String[] args) {
