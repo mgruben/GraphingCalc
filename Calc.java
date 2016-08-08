@@ -66,13 +66,18 @@ public class Calc extends JFrame {
         */
         
         setLayout(null);
+        
+        GraphPanel gp = new GraphPanel();
+        gp.setBounds(10,10,580,360);
+        add(gp);
+        
         CalcPanel cp = new CalcPanel();
         cp.setBounds(10,390,580,400);
         add(cp);
         
         setUndecorated(true);
         
-        setBackground(new Color(0,0,0,40));
+        setBackground(new Color(100,100,100));
         /* Transparency is broken on X11, see
         http://bugs.java.com/view_bug.do?bug_id=6849774
         "Note that until the bug 6848852 is fixed, that is unfeasible to
