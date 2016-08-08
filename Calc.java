@@ -77,7 +77,7 @@ public class Calc extends JFrame {
         
         setUndecorated(true);
         
-        setBackground(new Color(100,100,100));
+        setBackground(new Color(0,0,0));
         /* Transparency is broken on X11, see
         http://bugs.java.com/view_bug.do?bug_id=6849774
         "Note that until the bug 6848852 is fixed, that is unfeasible to
