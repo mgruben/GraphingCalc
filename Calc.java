@@ -23,5 +23,7 @@ import javax.swing.JFrame;
  * @author Michael <GrubenM@GMail.com>
  */
 public class Calc extends JFrame {
-    
+    public static void main(String[] args) {
+        
+    }
 }
