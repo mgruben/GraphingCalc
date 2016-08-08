@@ -2,6 +2,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -31,6 +32,12 @@ import javax.swing.UIManager.LookAndFeelInfo;
  * @author Michael <GrubenM@GMail.com>
  */
 public class Calc extends JFrame {
+    class GraphPanel extends JPanel {
+        public void paintComponent(Graphics g) {
+            g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+        }
+    }
+    
     class CalcPanel extends JPanel {
         public CalcPanel() {
             String ops = "789+456-123*0.=/";
