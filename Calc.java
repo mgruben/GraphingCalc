@@ -60,7 +60,7 @@ public class Calc extends JFrame {
         
         setLayout(null);
         CalcPanel cp = new CalcPanel();
-        cp.setBounds(10,400,560,400);
+        cp.setBounds(10,390,580,400);
         add(cp);
         
         setUndecorated(true);
