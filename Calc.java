@@ -3,6 +3,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /*
  * Copyright (C) 2016 Michael <GrubenM@GMail.com>
@@ -26,6 +27,11 @@ import javax.swing.JFrame;
  * @author Michael <GrubenM@GMail.com>
  */
 public class Calc extends JFrame {
+    class CalcPanel extends JPanel {
+        public CalcPanel() {
+            add(new JButton("Testing"));
+        }
+    }
     public Calc() {
         super();
         /* Jave uses layout managers for positioning
@@ -33,7 +39,7 @@ public class Calc extends JFrame {
         with cardinal directions (Center is the default).
         Center will take up as much room as possible.
         */
-        add(new JButton("Testing"), BorderLayout.NORTH);
+        add(new CalcPanel());
         setUndecorated(true);
         setBackground(new Color(0,0,0,40));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
