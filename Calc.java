@@ -35,7 +35,7 @@ public class Calc extends JFrame {
     class GraphPanel extends JPanel {
         public void paintComponent(Graphics g) {
             g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
-            g.setColor(new Color(0,255,255));
+            g.setColor(new Color(0,255,255,128));
             int w = getWidth();
             int h = getHeight();
             g.drawLine(10,h/2,w-10,h/2);
