@@ -27,6 +27,11 @@ import javax.swing.JFrame;
 public class Calc extends JFrame {
     public Calc() {
         super();
+        /* Jave uses layout managers for positioning
+        and sizing / resizing. JFrame uses BorderLayout
+        with cardinal directions (Center is the default).
+        Center will take up as much room as possible.
+        */
         add(new JButton("Testing"));
         setUndecorated(true);
         setBackground(new Color(0,0,0,40));
