@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import javax.swing.JFrame;
 
 /*
@@ -26,6 +27,7 @@ public class Calc extends JFrame {
     public Calc() {
         super();
         setUndecorated(true);
+        setBackground(new Color(0,0,0,40));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(20,40,600,1024);
         setVisible(true);
