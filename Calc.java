@@ -1,5 +1,3 @@
-
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -32,7 +30,11 @@ import javax.swing.UIManager.LookAndFeelInfo;
  * @author Michael <GrubenM@GMail.com>
  */
 public class Calc extends JFrame {
+    
     class GraphPanel extends JPanel {
+        public float f(float x) {
+            return x*x-4;
+        }
         public void paintComponent(Graphics g) {
             g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
             g.setColor(new Color(0,255,255,128));
