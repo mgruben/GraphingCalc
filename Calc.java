@@ -44,6 +44,9 @@ public class Calc extends JFrame {
         public float f(float x) {
             return tree.calc(x);
         }
+        public void setEqn(String eqn) {
+            tree.parse(eqn);
+        }
         public void paintComponent(Graphics g) {
             Graphics2D g2d = (Graphics2D) g;
             g2d.setRenderingHint(
@@ -123,7 +126,10 @@ public class Calc extends JFrame {
         tf.setBorder(null);
         tf.setFont(new Font("Segoe UI", Font.PLAIN, 20));
         tf.setHorizontalAlignment(SwingConstants.RIGHT);
-        
+        tf.addActionListener(e -> {
+            gp.setEqn(tf.getText().trim());
+            repaint();
+        });
         add(tf);
 
         
