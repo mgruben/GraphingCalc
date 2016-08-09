@@ -1,7 +1,10 @@
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.GridLayout;
+import java.awt.RenderingHints;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -36,6 +39,10 @@ public class Calc extends JFrame {
             return x*x-4;
         }
         public void paintComponent(Graphics g) {
+            Graphics2D g2d = (Graphics2D) g;
+            g2d.setRenderingHint(
+                    RenderingHints.KEY_ANTIALIASING,
+                    RenderingHints.VALUE_ANTIALIAS_ON);
             g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
             g.setColor(new Color(0,255,255,128));
             int w = getWidth();
@@ -43,6 +50,7 @@ public class Calc extends JFrame {
             g.drawLine(10,h/2,w-10,h/2);
             g.drawLine(w/2, 10, w/2, h-10);
             
+            g2d.setStroke(new BasicStroke(2.0f));
             g.setColor(Color.red);
             float scale = 40;
             float bounds = w / 2.0f / scale;
