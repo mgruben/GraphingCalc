@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
@@ -118,6 +119,7 @@ public class Calc extends JFrame {
         jl.setForeground(Color.WHITE);
         jl.setFont(new Font("Segoe UI", Font.PLAIN, 20));
         jl.setFocusable(true);
+        jl.setHorizontalAlignment(SwingConstants.RIGHT);
         jl.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 jl.setText(jl.getText() + e.getKeyChar());
