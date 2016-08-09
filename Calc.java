@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.awt.RenderingHints;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -112,9 +114,15 @@ public class Calc extends JFrame {
         add(cp);
         
         JLabel jl = new JLabel();
-        jl.setBounds(10,470,580,40);
+        jl.setBounds(10,450,580,40);
         jl.setForeground(Color.WHITE);
         jl.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+        jl.setFocusable(true);
+        jl.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                jl.setText(jl.getText() + e.getKeyChar());
+            }
+        });
         add(jl);
 
         
