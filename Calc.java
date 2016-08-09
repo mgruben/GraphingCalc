@@ -117,7 +117,9 @@ public class Calc extends JFrame {
         
         JTextField tf = new JTextField();
         tf.setBounds(10,450,580,40);
-        tf.setForeground(Color.BLACK);
+        tf.setForeground(Color.WHITE);
+        tf.setBackground(Color.BLACK);
+        tf.setBorder(null);
         tf.setFont(new Font("Segoe UI", Font.PLAIN, 20));
         tf.setFocusable(true);
         tf.setHorizontalAlignment(SwingConstants.RIGHT);
