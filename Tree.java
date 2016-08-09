@@ -88,7 +88,7 @@ public class Tree {
             getChar();
             return tmp;
         }
-        if (ch=='s') {
+        if (ch=='s' || ch=='c' || ch=='t') {
             Node tmp = new Node(ch);
             pos += 2;
             getChar();
@@ -110,6 +110,8 @@ public class Tree {
             case '*': return calc(root.left) * calc(root.right);
             case '/': return calc(root.left) / calc(root.right);
             case 's': return (float)Math.sin(calc(root.right));
+            case 'c': return (float)Math.cos(calc(root.right));
+            case 't': return (float)Math.tan(calc(root.right));
             case 'x': return x;
         }
         return Float.parseFloat(root.data);
