@@ -48,7 +48,7 @@ public class Tree {
     }
     protected Node findExpr() {
         Node tmproot = findProd();
-        while (ch=='+') {
+        while (ch=='+' || ch=='-') {
             Node tmp = new Node(ch);
             getChar();
             tmp.left = tmproot;
@@ -92,6 +92,7 @@ public class Tree {
     protected float calc(Node root) {
         switch(root.data.charAt(0)) {
             case '+': return calc(root.left) + calc(root.right);
+            case '-': return calc(root.left) - calc(root.right);
             case '*': return calc(root.left) * calc(root.right);
             case 'x': return x;
         }
