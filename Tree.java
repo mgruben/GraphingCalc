@@ -88,6 +88,14 @@ public class Tree {
             getChar();
             return tmp;
         }
+        if (ch=='s') {
+            Node tmp = new Node(ch);
+            pos += 2;
+            getChar();
+            tmp.right=findExpr();
+            getChar();
+            return tmp;
+        }
         return null;
     }
     protected float x;
@@ -101,6 +109,7 @@ public class Tree {
             case '-': return calc(root.left) - calc(root.right);
             case '*': return calc(root.left) * calc(root.right);
             case '/': return calc(root.left) / calc(root.right);
+            case 's': return (float)Math.sin(calc(root.right));
             case 'x': return x;
         }
         return Float.parseFloat(root.data);
