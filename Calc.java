@@ -39,7 +39,7 @@ public class Calc extends JFrame {
     class GraphPanel extends JPanel {
         Tree tree = new Tree();
         public GraphPanel() {
-            tree.parse("x*x*x*x*x-1");
+            tree.parse("x*x*x*x*x/550-1");
         }
         public float f(float x) {
             return tree.calc(x);

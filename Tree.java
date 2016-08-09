@@ -59,7 +59,7 @@ public class Tree {
     }
     protected Node findProd() {
         Node tmproot = findTerm();
-        while (ch=='*') {
+        while (ch=='*' || ch=='/') {
             Node tmp = new Node(ch);
             getChar();
             tmp.left = tmproot;
@@ -94,6 +94,7 @@ public class Tree {
             case '+': return calc(root.left) + calc(root.right);
             case '-': return calc(root.left) - calc(root.right);
             case '*': return calc(root.left) * calc(root.right);
+            case '/': return calc(root.left) / calc(root.right);
             case 'x': return x;
         }
         return Float.parseFloat(root.data);
