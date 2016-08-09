@@ -7,6 +7,7 @@ import java.awt.GridLayout;
 import java.awt.RenderingHints;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
@@ -107,8 +108,15 @@ public class Calc extends JFrame {
         add(gp);
         
         CalcPanel cp = new CalcPanel();
-        cp.setBounds(10,390,580,400);
+        cp.setBounds(10,490,580,300);
         add(cp);
+        
+        JLabel jl = new JLabel();
+        jl.setBounds(10,470,580,40);
+        jl.setForeground(Color.WHITE);
+        jl.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+        add(jl);
+
         
         setUndecorated(true);
         
