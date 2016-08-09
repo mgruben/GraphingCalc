@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
@@ -114,18 +115,14 @@ public class Calc extends JFrame {
         cp.setBounds(10,490,580,300);
         add(cp);
         
-        JLabel jl = new JLabel();
-        jl.setBounds(10,450,580,40);
-        jl.setForeground(Color.WHITE);
-        jl.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-        jl.setFocusable(true);
-        jl.setHorizontalAlignment(SwingConstants.RIGHT);
-        jl.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent e) {
-                jl.setText(jl.getText() + e.getKeyChar());
-            }
-        });
-        add(jl);
+        JTextField tf = new JTextField();
+        tf.setBounds(10,450,580,40);
+        tf.setForeground(Color.BLACK);
+        tf.setFont(new Font("Segoe UI", Font.PLAIN, 20));
+        tf.setFocusable(true);
+        tf.setHorizontalAlignment(SwingConstants.RIGHT);
+        
+        add(tf);
 
         
         setUndecorated(true);
