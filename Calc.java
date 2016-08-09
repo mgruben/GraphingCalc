@@ -42,6 +42,21 @@ public class Calc extends JFrame {
             int h = getHeight();
             g.drawLine(10,h/2,w-10,h/2);
             g.drawLine(w/2, 10, w/2, h-10);
+            float scale = 40;
+            float bounds = w / 2.0f / scale;
+            float x = -bounds;
+            float y = f(x);
+            int grx = Math.round(x*40+w/2); // Affine
+            int gry = Math.round(h/2-y*40); // transformation
+            
+            while (x < bounds) {
+                x += 0.1f;
+                y = f(x);
+                int oldgrx = grx, oldgry = gry;
+                grx = Math.round(x*40+w/2);
+                gry = Math.round(h/2-y*40);
+                g.drawLine(oldgrx, oldgry, grx, gry);
+            }
         }
     }
     
