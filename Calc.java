@@ -42,6 +42,8 @@ public class Calc extends JFrame {
             int h = getHeight();
             g.drawLine(10,h/2,w-10,h/2);
             g.drawLine(w/2, 10, w/2, h-10);
+            
+            g.setColor(Color.red);
             float scale = 40;
             float bounds = w / 2.0f / scale;
             float x = -bounds;
