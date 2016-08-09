@@ -121,7 +121,6 @@ public class Calc extends JFrame {
         tf.setBackground(Color.BLACK);
         tf.setBorder(null);
         tf.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-        tf.setFocusable(true);
         tf.setHorizontalAlignment(SwingConstants.RIGHT);
         
         add(tf);
