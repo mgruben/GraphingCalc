@@ -39,7 +39,7 @@ public class Calc extends JFrame {
     class GraphPanel extends JPanel {
         Tree tree = new Tree();
         public GraphPanel() {
-            tree.parse("x*x*x*x*x/550-1");
+            tree.parse("sin(x)/cos(x)");
         }
         public float f(float x) {
             return tree.calc(x);
@@ -72,7 +72,7 @@ public class Calc extends JFrame {
             int gry = Math.round(h/2-y*40); // transformation
             
             while (x < bounds) {
-                x += 0.1f;
+                x += 0.01f;
                 y = f(x);
                 int oldgrx = grx, oldgry = gry;
                 grx = Math.round(x*40+w/2);
