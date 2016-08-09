@@ -43,6 +43,8 @@ public class Calc extends JFrame {
             g2d.setRenderingHint(
                     RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
+            
+            // Draw the graphing window
             g.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
             g.setColor(new Color(0,255,255,128));
             int w = getWidth();
@@ -50,6 +52,7 @@ public class Calc extends JFrame {
             g.drawLine(10,h/2,w-10,h/2);
             g.drawLine(w/2, 10, w/2, h-10);
             
+            // Draw the function y = x**2;
             g2d.setStroke(new BasicStroke(2.0f));
             g.setColor(Color.red);
             float scale = 40;
