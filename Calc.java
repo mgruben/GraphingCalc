@@ -37,8 +37,12 @@ import javax.swing.UIManager.LookAndFeelInfo;
 public class Calc extends JFrame {
     
     class GraphPanel extends JPanel {
+        Tree tree = new Tree();
+        public GraphPanel() {
+            tree.parse("x");
+        }
         public float f(float x) {
-            return x*x-4;
+            return tree.calc(x);
         }
         public void paintComponent(Graphics g) {
             Graphics2D g2d = (Graphics2D) g;
