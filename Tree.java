@@ -82,6 +82,12 @@ public class Tree {
             }
             return new Node(sb.toString());
         }
+        if (ch=='(') {
+            getChar();
+            Node tmp = findExpr();
+            getChar();
+            return tmp;
+        }
         return null;
     }
     protected float x;
