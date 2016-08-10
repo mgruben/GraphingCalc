@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
@@ -38,8 +39,14 @@ public class Calc extends JFrame {
     
     class GraphPanel extends JPanel {
         Tree tree = new Tree();
+        float t;
         public GraphPanel() {
-            tree.parse("sin(x)/cos(x)");
+            tree.parse("sin(x)");
+            Timer timer = new Timer(100,e-> {
+                t += 0.2f;
+                repaint();
+            });
+            timer.start();
         }
         public float f(float x) {
             return tree.calc(x);
@@ -67,13 +74,13 @@ public class Calc extends JFrame {
             float scale = 40;
             float bounds = w / 2.0f / scale;
             float x = -bounds;
-            float y = f(x);
+            float y = f(x+t);
             int grx = Math.round(x*40+w/2); // Affine
             int gry = Math.round(h/2-y*40); // transformation
             
             while (x < bounds) {
                 x += 0.01f;
-                y = f(x);
+                y = f(x+t);
                 int oldgrx = grx, oldgry = gry;
                 grx = Math.round(x*40+w/2);
                 gry = Math.round(h/2-y*40);
