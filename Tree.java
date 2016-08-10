@@ -96,6 +96,12 @@ public class Tree {
             getChar();
             return tmp;
         }
+        if (ch=='-') {
+            Node tmp = new Node(ch);
+            getChar();
+            tmp.right=findTerm();
+            return tmp;
+        }
         return null;
     }
     protected float x;
@@ -106,7 +112,8 @@ public class Tree {
     protected float calc(Node root) {
         switch(root.data.charAt(0)) {
             case '+': return calc(root.left) + calc(root.right);
-            case '-': return calc(root.left) - calc(root.right);
+            case '-': if (root.left==null) return -calc(root.right);
+                return calc(root.left) - calc(root.right);
             case '*': return calc(root.left) * calc(root.right);
             case '/': return calc(root.left) / calc(root.right);
             case 's': return (float)Math.sin(calc(root.right));
